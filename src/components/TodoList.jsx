@@ -11,7 +11,7 @@ export default function TodoList({
 }) {
   if (todos.length === 0) {
     return (
-      <div className="text-center py-10 px-4 text-sm text-muted-foreground bg-muted/15 rounded-xl border border-dashed border-border/70 flex flex-col items-center justify-center gap-2 animate-list-entrance">
+      <div className="flex-1 min-h-[220px] text-center p-6 text-sm text-muted-foreground bg-muted/15 rounded-xl border border-dashed border-border/70 flex flex-col items-center justify-center gap-2 animate-list-entrance">
         {searchQuery ? (
           <>
             <SearchX className="size-8 text-muted-foreground/60 mb-1" />
@@ -36,8 +36,8 @@ export default function TodoList({
   }
 
   return (
-    <div key={filter} className="animate-list-entrance">
-      <ul className="flex flex-col gap-2 max-h-[380px] overflow-y-auto pr-1">
+    <div key={filter} className="flex-1 min-h-[220px] flex flex-col animate-list-entrance">
+      <ul className="flex-1 max-h-[300px] overflow-y-auto flex flex-col gap-2 pr-1">
         {todos.map((todo, index) => (
           <TodoItem
             key={todo.id}

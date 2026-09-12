@@ -68,7 +68,7 @@ function App() {
   return (
     <TooltipProvider delay={200}>
       <div className="min-h-screen min-h-dvh bg-background text-foreground flex items-center justify-center p-4 sm:p-6 font-sans selection:bg-primary/20">
-        <Card className="w-full max-w-lg my-auto border-border/70 bg-card shadow-2xl rounded-2xl overflow-hidden py-0">
+        <Card className="w-full max-w-lg min-h-[580px] sm:min-h-[620px] flex flex-col my-auto border-border/70 bg-card shadow-2xl rounded-2xl overflow-hidden py-0">
           <CardHeader className="pt-6 pb-4">
             <TodoHeader
               title="Task Flow"
@@ -77,7 +77,7 @@ function App() {
             />
           </CardHeader>
 
-          <CardContent className="flex flex-col gap-4 px-6">
+          <CardContent className="flex-1 flex flex-col gap-4 px-6 pb-4">
             <TodoInput onAdd={handleAddTodo} />
 
             <Separator className="opacity-40" />
@@ -106,7 +106,7 @@ function App() {
             />
           </CardContent>
 
-          <CardFooter className="py-3 px-6 border-t border-border/40 bg-muted/20">
+          <CardFooter className="mt-auto py-3 px-6 border-t border-border/40 bg-muted/20">
             <TodoFooter
               activeCount={activeCount}
               completedCount={completedCount}
